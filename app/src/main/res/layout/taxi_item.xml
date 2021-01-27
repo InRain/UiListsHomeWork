@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="16dp"
+    android:backgroundTint="@color/yellow"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+        <TextView
+            android:id="@+id/taxi_name"
+            android:textSize="25sp"
+            android:layout_margin="3dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="UBER"/>
+        <TextView
+            android:id="@+id/taxi_number"
+            android:textSize="20sp"
+            android:layout_margin="3dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="A000AA152"/>
+
+        <RelativeLayout
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/delete"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:src="@android:drawable/ic_delete" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>
