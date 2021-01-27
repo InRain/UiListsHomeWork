@@ -24,10 +24,7 @@ class MainFragment(private val contentType: FragmentContentType) : Fragment() {
     ): View? {
         binding = FragmentMainBinding.inflate(inflater, container, false)
 
-        val adapter = Adapter() {
-            Toast.makeText(activity, "Position = $it", Toast.LENGTH_SHORT).show()
-
-        }
+        val adapter = Adapter()
 
         when (FragmentContentType.create(contentType.value)) {
             FragmentContentType.TAXI -> adapter.itemList = FakeDataSource.getTaxies()

@@ -9,7 +9,7 @@ import com.homework.uilistshomework.databinding.CarItemBinding
 import com.homework.uilistshomework.databinding.MotorcycleItemBinding
 import com.homework.uilistshomework.databinding.TaxiItemBinding
 
-class Adapter(val deleteItem: (position: Int) -> Unit) :
+class Adapter() :
     RecyclerView.Adapter<Adapter.BaseViewHolder>() {
 
     var itemList: List<Item> = mutableListOf()
