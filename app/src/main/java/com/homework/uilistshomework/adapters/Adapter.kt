@@ -3,14 +3,16 @@ package com.homework.uilistshomework.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.homework.uilistshomework.Item
 import com.homework.uilistshomework.databinding.CarItemBinding
 import com.homework.uilistshomework.databinding.MotorcycleItemBinding
 import com.homework.uilistshomework.databinding.TaxiItemBinding
 
-class Adapter() :
-    RecyclerView.Adapter<Adapter.BaseViewHolder>() {
+class Adapter(itemCallback: DiffUtil.ItemCallback<Item>) :
+    ListAdapter<Item, Adapter.BaseViewHolder>(itemCallback) {
 
     var itemList: List<Item> = mutableListOf()
         set(value) {
