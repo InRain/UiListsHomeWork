@@ -26,10 +26,9 @@ class MainFragment(private val contentType: FragmentContentType) : Fragment() {
 
         val adapter = Adapter()
 
-        when (FragmentContentType.create(contentType.value)) {
-            FragmentContentType.TAXI -> adapter.itemList = FakeDataSource.getTaxies()
-            FragmentContentType.CARS_AND_MOTORCYCLES -> adapter.itemList =
-                FakeDataSource.getCarsAndMotorcycles()
+        adapter.itemList = when(contentType){
+            FragmentContentType.TAXI -> FakeDataSource.getTaxies()
+            FragmentContentType.CARS_AND_MOTORCYCLES -> FakeDataSource.getCarsAndMotorcycles()
         }
 
         binding.recyclerView.adapter = adapter
